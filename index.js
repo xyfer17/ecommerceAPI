@@ -5,6 +5,7 @@ const authRoute = require("./Routes/auth");
 const productRoute = require("./Routes/product");
 const cartRoute = require("./Routes/cart");
 const orderRoute = require("./Routes/order");
+const stripeRoute = require("./Routes/stripe");
 
 require("dotenv").config();
 
@@ -26,6 +27,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/products", productRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/cart", cartRoute);
+app.use("/api/checkout", stripeRoute);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("sever started");
