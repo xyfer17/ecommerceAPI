@@ -33,7 +33,7 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-//Delete
+//Delete"http://localhost:5000/api/products?cat"
 
 router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
   try {
@@ -55,7 +55,7 @@ router.get("/find/:id", async (req, res) => {
   }
 });
 
-//Get all User
+//Get all product
 
 router.get("/", async (req, res) => {
   const qNew = req.query.new;
